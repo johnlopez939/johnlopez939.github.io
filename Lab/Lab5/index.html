@@ -6,8 +6,7 @@
   <html lang="en">
 </head>
 <body>
-  <form action = "http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php"
-method="post">
+  <form action = "http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php"method="post">
   <h1>Volunteer Form</h1>
 
   <fieldset>
@@ -22,29 +21,29 @@ method="post">
       <div>
         <!--Last Name-->
         <label for="lastName">last name:</label>
-        <input type="text" id="lname" name="last_name_field" required/>
+        <input type="text" id="lname" name="last_name_field" required size = "100"/>
       </div>
 
       <div>
         <!--Phone Number-->
         <label for="phone">phone:</label>
-        <input type="tel" id="phone" name="phone_field" required/>
+        <input type="tel" id="phone" name="phone_field" size = "100"/>
       </div>
 
       <div>
         <!--Email-->
         <label for="email">email:</label>
-        <input type="email" id="email" name="email_field"/>
+        <input type="email" id="email" name="email_field" size = "100"/>
       </div>
       
       <div>
         <!--Gender-->
         <p>Gender:</p>
-        <input type="radio" id="Male" name="gender" value="Male">
-        <label for="Male">Male</label>
+          <input type="radio" id="Male" name="gender" value="Male">
+          <label for="Male">Male</label>
 
-        <input type="radio" id="Female" name="gender" value="Female">
-        <label for="Female">Female</label>
+          <input type="radio" id="Female" name="gender" value="Female">
+          <label for="Female">Female</label>
 
       </div>
 
@@ -83,8 +82,8 @@ method="post">
           <input type="checkbox" id="available_field[]" name="Friday">
           <label for="available_field[]">Friday</label><br>
           
+          <label for="available_field[]">Saturday</label>          
           <input type="checkbox" id="available_field[]" name="Saturday">
-          <label for="available_field[]">Saturday</label><br>
 
         <h3>Comments</h3>
          <textarea id="commentbox" name="comments" rows="4" cols="50"></textarea>
