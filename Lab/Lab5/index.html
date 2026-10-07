@@ -39,10 +39,10 @@
       <div>
         <!--Gender-->
         Gender:<br>
-          <input type="radio" id="Male" name="gender" value="Male">
+          <input type="radio" id="Male" name="gender_field" value="Male">
           <label for="Male">Male</label>
 
-          <input type="radio" id="Female" name="gender" value="Female">
+          <input type="radio" id="Female" name="gender_field" value="Female">
           <label for="Female">Female</label>
 
       </div>
@@ -54,13 +54,16 @@
           <option value="under18">under 18</option>
           <option value="over18">over 18</option>
         </select>
+
       </div>
     </fieldset>
 
     <fieldset>
       <legend>My Availability</legend>
-      <!--For the Days Available-->
-        <h3>Days Available:</h3>
+
+      <div>
+        <!--For the Days Available-->
+        <h2>Days Available:</h2>
           <label>Sunday <input type="checkbox" id="sunday" name="available_field[]" value="Sunday"></label><br>
           <label>Monday <input type="checkbox" id="monday" name="available_field[]" value="Monday"></label><br>
           <label>Tuesday <input type="checkbox" id="tuesday" name="available_field[]" value="Tuesday"></label><br>
@@ -68,9 +71,12 @@
           <label>Thursday <input type="checkbox" id="thursday" name="available_field[]" value="Thursday"></label><br>
           <label>Friday <input type="checkbox" id="friday" name="available_field[]" value="Friday"></label><br>
           <label>Saturday <input type="checkbox" id="saturday" name="available_field[]" value="Saturday"></label><br>
+      </div>
 
-        <h3>Comments</h3>
-         <textarea id="commentbox" name="comments" rows="2" cols="10"></textarea>
+      <div>
+        <h2>Comments</h2>
+         <textarea id="commentbox" name="comments_field" rows="2" cols="10"></textarea>
+      </div>
 
         </fieldset>
 
