@@ -6,15 +6,22 @@
 #header
 
 #header h1
+{ position: relative;<br>
+  margin-top: 40px;<br>
+  border-radius: 12px 12px 0px 0px;}
 
 #header a#logo1 img
 
 #header #toplink
 
 #footer
-
+{   background-color: #777;<br>
+    height: 80px;<br>
+    clear: both;}
+    
 #content-wrapper
-
+{   background-image: url("../images/repeating.png");<br>
+    float: left;}
 #main-content
 
 h2 strong
@@ -28,7 +35,11 @@ h2 strong
     margin: 10px 0 10px 20px;}
 
 #side-content
-
+{   min-height: 300px;<br>
+    width: 715px;<br>
+    margin-right: 30px;<br>
+    float: left;<br>
+    margin-left: 15px;}
 #main-nav
 
 #main-nav ul
