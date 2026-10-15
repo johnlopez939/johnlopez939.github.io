@@ -1,0 +1,46 @@
+#body
+{   background-image: url("../images/black.jpg"); }
+
+#page-wrapper
+
+#header
+
+#header h1
+
+#header a#logo1 img
+
+#header #toplink
+
+#footer
+
+#content-wrapper
+
+#main-content
+
+h2 strong
+
+.image-r
+{   float: right;<br>
+    border: 2px solid blue;<br>
+  width: 300px;<br>
+    padding: 5px;<br>
+    background-color: white;<br>
+    margin: 10px 0 10px 20px;}
+
+#side-content
+
+#main-nav
+
+#main-nav ul
+
+#main-nav ul li
+
+#main-nav ul li a
+
+#main-nav ul li a:hover
+
+#center
+
+#strong
+{       font-weight: 900;<br>
+        font-size: 48px;}
