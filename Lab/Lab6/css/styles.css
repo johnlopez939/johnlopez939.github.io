@@ -11,7 +11,12 @@
   border-radius: 12px 12px 0px 0px;}
 
 #header a#logo1 img
-
+{   position: absolute;<br>
+    left: 420px;<br>
+    top:5px;<br>
+  font-size: 3em;<br>
+    font-family: 'Devonshire', cursive;<br>
+  color: #E35335;}
 #header #toplink
 
 #footer
