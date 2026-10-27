@@ -1,8 +1,50 @@
 body {
-    background-color: lightblue;
+    background-color: rgb(88, 127, 193);
 }
 
-h1 {
+
+#sportHeader {
+    background-color: #b890d7;
+    overflow: hidden;
+}
+
+#sportHeader h1 {
     color: white;
     text-align: center;
 }
+
+
+#sportNav
+{   float: left;
+    width: 100%;
+    background-color: #00f7ff; }
+
+#sportNav ul
+{   list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: relative;
+    left: 50%; }
+
+#sportNav ul li
+{   float: left;
+    position: relative;
+    right: 50%; }
+
+#sportNav ul li a
+{   padding: 10px 25px;
+    display: block;
+    text-decoration: none;
+    color: #000000; }
+
+#sportNav ul li a:hover
+{   background-color: #000000;
+    color: #00f7ff; }
+
+#sportNav ul li ul
+{   display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #00f7ff; }
