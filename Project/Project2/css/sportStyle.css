@@ -1,50 +1,88 @@
+/* Style 1: page background and base font size */
 body {
     background-color: rgb(88, 127, 193);
+    font-size: 100%;
 }
-
-
+ 
+/* Style 2: header */
 #sportHeader {
     background-color: #b890d7;
     overflow: hidden;
 }
-
+ 
+/* Style 3: header title */
 #sportHeader h1 {
     color: white;
     text-align: center;
+    font-size: 5vw;
 }
-
-
-#sportNav
-{   float: left;
+ 
+/* Style 4: navigation bar */
+#sportNav {
+    float: left;
     width: 100%;
-    background-color: #00f7ff; }
-
-#sportNav ul
-{   list-style-type: none;
+    background-color: #00f7ff;
+}
+ 
+/* Style 5: nav list (centered with the left/right 50% trick) */
+#sportNav ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
     float: left;
     position: relative;
-    left: 50%; }
-
-#sportNav ul li
-{   float: left;
+    left: 50%;
+}
+ 
+/* Style 6: nav list items */
+#sportNav ul li {
+    float: left;
     position: relative;
-    right: 50%; }
-
-#sportNav ul li a
-{   padding: 10px 25px;
+    right: 50%;
+}
+ 
+/* Style 7: nav links */
+#sportNav ul li a {
+    padding: 0.625rem 1.5rem;
     display: block;
     text-decoration: none;
-    color: #000000; }
-
-#sportNav ul li a:hover
-{   background-color: #000000;
-    color: #00f7ff; }
-
-#sportNav ul li ul
-{   display: none;
+    color: #000000;
+}
+ 
+/* Style 8: nav link hover */
+#sportNav ul li a:hover {
+    background-color: #000000;
+    color: #00f7ff;
+}
+ 
+/* Style 9: dropdown menu (hidden by default) */
+#sportNav ul li ul {
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #00f7ff; }
+    min-width: 100%;
+    z-index: 10;
+    background-color: #00f7ff;
+}
+ 
+/* Style 10: show dropdown when hovering the parent item */
+#sportNav ul li:hover > ul {
+    display: block;
+}
+ 
+/* Style 11: dropdown items stack vertically */
+#sportNav ul li ul li {
+    float: none;
+    right: 0;
+}
+ 
+/* Style 12: page title below the nav */
+#sportTitle {
+    clear: both;
+    text-align: center;
+    color: black;
+    font-size: 2.5rem;
+    margin-top: 1.25rem;
+}
+ 

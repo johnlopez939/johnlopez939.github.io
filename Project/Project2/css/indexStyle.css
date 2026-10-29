@@ -1,8 +1,9 @@
+/*Style 1*/
 body {
     background-color: rgb(88, 127, 193);
 }
 
-
+/*Style 2*/
 #indexHeader {
     background-color: #b890d7;
     overflow: hidden;
