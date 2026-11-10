@@ -1,17 +1,14 @@
-function init(){
-//add your javascrip between these two lines of code
-  const input = document.getElementById('entryinput');
-  const button = document.getElementById('entrybutton');
-  const output = document.getElementById('output');
+function init() {
+  // Create a variable to store button object content
+  var button = document.getElementById('entrybutton');
 
-  button.addEventListener('click', function(){
-    const message = input.value;
+  function myFunction() {
+    var message = document.getElementById("entryinput").value;
+    alert('John David Lopez: ' + message);
+    document.getElementById("textoutput").textContent = message;
+  }
 
-    alert('John David Lopez: '+ message);
-
-    output.textContent = message;
-  });
+  button.addEventListener('click', myFunction);
 }
-
 
 window.addEventListener('load', init);
