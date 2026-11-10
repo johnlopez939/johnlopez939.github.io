@@ -1,9 +1,9 @@
-/*Style 1*/
+/* Style 1: Page background */
 body {
     background-color: rgb(88, 127, 193);
 }
 
-/*Style 2*/
+/* Style 2: Header */
 #indexHeader {
     background-color: #b890d7;
     overflow: hidden;
@@ -14,41 +14,50 @@ body {
     text-align: center;
 }
 
-#indexNav
-{   float: left;
+/* Style 3: Navigation bar */
+#indexNav {
+    float: left;
     width: 100%;
-    background-color: #00f7ff; }
+    background-color: #00f7ff;
+}
 
-#indexNav ul
-{   list-style-type: none;
+#indexNav ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
     float: left;
     position: relative;
-    left: 50%; }
+    left: 50%;
+}
 
-#indexNav ul li
-{   float: left;
+#indexNav ul li {
+    float: left;
     position: relative;
-    right: 50%; }
+    right: 50%;
+}
 
-#indexNav ul li a
-{   padding: 10px 25px;
+#indexNav ul li a {
+    padding: 10px 25px;
     display: block;
     text-decoration: none;
-    color: #000000; }
+    color: #000000;
+}
 
-#indexNav ul li a:hover
-{   background-color: #000000;
-    color: #00f7ff; }
+#indexNav ul li a:hover {
+    background-color: #000000;
+    color: #00f7ff;
+}
 
-#indexNav ul li ul
-{   display: none;
+/* Style 4: Dropdown menu */
+#indexNav ul li ul {
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #00f7ff; }
+    background-color: #00f7ff;
+}
 
+/* Style 5: Welcome message */
 #indexWelcome {
     text-align: center;
     color: black;
@@ -56,7 +65,7 @@ body {
     margin-top: 20px;
 }
 
-
+/* Style 6: Intro text */
 #indexIntro {
     text-align: center;
     color: black;
@@ -64,6 +73,7 @@ body {
     margin-top: 20px;
 }
 
+/* Style 7: Additional info text */
 #indexAdditionalInfo {
     text-align: center;
     color: black;
