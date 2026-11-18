@@ -1,0 +1,107 @@
+/* Style 1: Page background, font, and fluid width */
+body {
+  background-color: #e2e0c3;
+  font-family: "Times New Roman", serif;
+  margin: 0 auto;
+  padding: 0 2% 2.5rem;
+  max-width: 75rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Style 2: Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem 5%;
+  padding: 1.25em 0;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Style 3: Headings */
+h1 {
+  text-align: center;
+  font-size: calc(1.75rem + 3vw);
+}
+
+h2 {
+  color: #1b4560;
+  font-weight: normal;
+}
+
+/* Style 4: Experience and education/skills sections */
+.experience,
+.education-skills {
+  display: flex;
+  gap: 4%;
+  align-items: flex-start;
+}
+
+.experience > section,
+.education-skills > section {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Style 5: Job entries */
+.job {
+  margin-bottom: 1.1em;
+}
+
+.job h3 {
+  margin: 0 0 0.25em;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  margin-bottom: 0.25em;
+}
+
+.job-header span {
+  color: #000000;
+  font-size: 0.8125rem;
+}
+
+.job ul {
+  margin: 0;
+  padding-left: 1.5em;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+/* Style 6: Dates and bold text */
+.dates {
+  font-weight: bold;
+  margin: 0.3em 0 0.6em;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+/* Style 7: Skills list */
+.skills {
+  text-align: center;
+}
+
+.skills ul {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Style 8: Responsive columns that stack on narrow screens (no media query) */
+.experience,
+.education-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+  gap: 1rem 4%;
+  align-items: start;
+}
