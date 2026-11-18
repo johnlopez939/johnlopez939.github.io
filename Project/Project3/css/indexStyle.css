@@ -1,13 +1,12 @@
-/* Style 1: Page background */
-/* Style 1: Page background and fixed width */
+/* ---------- Base (mobile) styles ---------- */
+
 body {
     background-color: rgb(88, 127, 193);
     font-size: 16px;
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
 }
 
-/* Style 2: Header */
 #indexHeader {
     background-color: #b890d7;
     overflow: hidden;
@@ -16,33 +15,29 @@ body {
 #indexHeader h1 {
     color: white;
     text-align: center;
-    font-size: 48px;
+    font-size: 32px;
 }
 
-/* Style 3: Navigation bar */
+/* Navigation: stacked vertically on small screens */
 #indexNav {
-    float: left;
-    width: 960px;
+    width: 100%;
     background-color: #00f7ff;
+    display: flow-root;
 }
 
 #indexNav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    float: left;
-    position: relative;
-    left: 50%;
 }
 
 #indexNav ul li {
-    float: left;
-    position: relative;
-    right: 50%;
+    display: block;
+    text-align: center;
 }
 
 #indexNav ul li a {
-    padding: 10px 24px;
+    padding: 12px;
     display: block;
     text-decoration: none;
     color: #000000;
@@ -53,7 +48,7 @@ body {
     color: #00f7ff;
 }
 
-/* Style 4: Dropdown menu */
+/* Dropdown menu */
 #indexNav ul li ul {
     display: none;
     position: absolute;
@@ -73,26 +68,79 @@ body {
     right: 0;
 }
 
-/* Style 5: Welcome message */
 #indexWelcome {
     text-align: center;
     color: black;
-    font-size: 40px;
+    font-size: 26px;
     margin-top: 20px;
 }
 
-/* Style 6: Intro text */
 #indexIntro {
     text-align: center;
     color: black;
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: 16px;
+    margin: 20px 15px 0;
 }
 
-/* Style 7: Additional info text */
 #indexAdditionalInfo {
     text-align: center;
     color: black;
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: 16px;
+    margin: 20px 15px 0;
+}
+
+/* ---------- Media query 1: tablets (600px and up) ---------- */
+@media (min-width: 600px) {
+    /* Change 1: nav links go horizontal and centered */
+    #indexNav ul {
+        float: left;
+        position: relative;
+        left: 50%;
+    }
+
+    #indexNav ul li {
+        float: left;
+        position: relative;
+        right: 50%;
+    }
+
+    /* Change 2: roomier link padding */
+    #indexNav ul li a {
+        padding: 10px 24px;
+    }
+
+    /* Change 3: larger welcome heading */
+    #indexWelcome {
+        font-size: 36px;
+    }
+
+    /* Change 4: larger body text */
+    #indexIntro,
+    #indexAdditionalInfo {
+        font-size: 18px;
+    }
+}
+
+/* ---------- Media query 2: desktops (960px and up) ---------- */
+@media (min-width: 960px) {
+    /* Change 1: fixed-width centered page */
+    body {
+        width: 960px;
+    }
+
+    /* Change 2: biggest welcome heading */
+    #indexWelcome {
+        font-size: 40px;
+    }
+
+    /* Change 3: larger intro text */
+    #indexIntro,
+    #indexAdditionalInfo {
+        font-size: 20px;
+    }
+
+    /* Change 4: larger header title */
+    #indexHeader h1 {
+        font-size: 48px;
+    }
 }
