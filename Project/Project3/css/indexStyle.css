@@ -114,8 +114,7 @@ body {
         font-size: 36px;
     }
 
-    /* Change 4: larger body text */
-    #indexIntro,
+;    #indexIntro,
     #indexAdditionalInfo {
         font-size: 18px;
     }

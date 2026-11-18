@@ -77,3 +77,7 @@ body {
     float: none;
     right: 0;
 }
+
+#mapWelcome {
+    text-align: center;
+}
