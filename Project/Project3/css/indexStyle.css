@@ -114,7 +114,8 @@ body {
         font-size: 36px;
     }
 
-;    #indexIntro,
+    /* Change 4: slightly larger body text */
+    #indexIntro,
     #indexAdditionalInfo {
         font-size: 18px;
     }
@@ -138,8 +139,8 @@ body {
         font-size: 20px;
     }
 
-    /* Change 4: larger header title */
-    #indexHeader h1 {
-        font-size: 48px;
+    /* Change 4: larger nav links */
+    #indexNav ul li a {
+        font-size: 18px;
     }
 }
