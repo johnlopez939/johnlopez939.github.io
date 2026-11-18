@@ -1,6 +1,10 @@
 /* Style 1: Page background */
+/* Style 1: Page background and fixed width */
 body {
     background-color: rgb(88, 127, 193);
+    font-size: 16px;
+    width: 960px;
+    margin: 0 auto;
 }
 
 /* Style 2: Header */
@@ -12,12 +16,13 @@ body {
 #indexHeader h1 {
     color: white;
     text-align: center;
+    font-size: 48px;
 }
 
 /* Style 3: Navigation bar */
 #indexNav {
     float: left;
-    width: 100%;
+    width: 960px;
     background-color: #00f7ff;
 }
 
@@ -37,7 +42,7 @@ body {
 }
 
 #indexNav ul li a {
-    padding: 10px 25px;
+    padding: 10px 24px;
     display: block;
     text-decoration: none;
     color: #000000;
@@ -54,7 +59,18 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
+    min-width: 100%;
+    z-index: 10;
     background-color: #00f7ff;
+}
+
+#indexNav ul li:hover > ul {
+    display: block;
+}
+
+#indexNav ul li ul li {
+    float: none;
+    right: 0;
 }
 
 /* Style 5: Welcome message */
