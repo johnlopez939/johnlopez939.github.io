@@ -1,26 +1,29 @@
 "use strict";
 
+var map;
+
 document.addEventListener("DOMContentLoaded", function () {
   setupQuestionsButton();
-  loadMapScript();
+  loadGoogleMaps();
 });
 
-// Questions button: two-line alert (replace the email)
+// Questions button (does nothing on pages without the button)
 function setupQuestionsButton() {
-  const btn = document.getElementById("questionsBtn");
-  if (!btn) return;
-
+  var btn = document.getElementById("questionsBtn");
+  if (!btn) {
+    return;
+  }
   btn.addEventListener("click", function () {
-    alert("If you have questions, contact me at:\n your.email@example.com");
+    alert("If you have questions, contact me at:\nyour.email@example.com");
   });
 }
 
-
-// Only loads the Google Maps API on pages that have the map container
-function loadMapScript() {
-  if (!document.getElementById("googleMap")) return;
-
-  const script = document.createElement("script");
+// Loads the Google Maps API (only on pages with the map container)
+function loadGoogleMaps() {
+  if (!document.getElementById("googleMap")) {
+    return;
+  }
+  var script = document.createElement("script");
   script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1F-BpX660SBK3-Vw9O9f7AEvTAIH8rI&callback=initMap";
   script.async = true;
   script.onerror = function () {
@@ -29,45 +32,13 @@ function loadMapScript() {
   document.head.appendChild(script);
 }
 
-// Google calls this once its API has loaded
-window.initMap = async function () {
-  try {
-    const { Map, InfoWindow } = await google.maps.importLibrary("maps");
-    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+// Google calls this after its API has loaded
+function initMap() {
+  var nyc = { lat: 40.7128, lng: -74.0060 }; // New York City
 
-    const iit = { lat: 41.8348, lng: -87.6270 }; // Illinois Tech, Chicago
-
-    // Base map: options object + container element + constructor
-    const map = new Map(document.getElementById("googleMap"), {
-      center: iit,
-      zoom: 14,
-      mapId: "DEMO_MAP_ID"
-    });
-
-    // Feature 1: a marker at the starting location
-    const marker = new AdvancedMarkerElement({
-      map: map,
-      position: iit,
-      title: "Illinois Tech"
-    });
-
-    // Feature 2: an info window that opens when the marker is clicked
-    const infoWindow = new InfoWindow({
-      content: "<strong>Illinois Tech</strong><br>Click anywhere on the map to add a marker."
-    });
-    marker.addListener("click", function () {
-      infoWindow.open({ anchor: marker, map: map });
-    });
-
-    // Feature 3: clicking the map drops a new marker
-    map.addListener("click", function (event) {
-      new AdvancedMarkerElement({
-        map: map,
-        position: event.latLng,
-        title: "Custom marker"
-      });
-    });
-  } catch (err) {
-    console.error("Map setup failed:", err);
-  }
-};
+  map = new google.maps.Map(document.getElementById("googleMap"), {
+    center: nyc,
+    zoom: 12,
+    mapTypeId: "roadmap"
+  });
+}
