@@ -90,7 +90,7 @@ body {
 }
 
 /* ---------- Media query 1: tablets (600px and up) ---------- */
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
     /* Change 1: nav links go horizontal and centered */
     #indexNav ul {
         float: left;
@@ -122,10 +122,11 @@ body {
 }
 
 /* ---------- Media query 2: desktops (960px and up) ---------- */
-@media (min-width: 960px) {
+@media screen and(min-width: 960px) {
     /* Change 1: fixed-width centered page */
     body {
         width: 960px;
+        background-color: darkred;
     }
 
     /* Change 2: biggest welcome heading */

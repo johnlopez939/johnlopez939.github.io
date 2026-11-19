@@ -24,7 +24,8 @@ function loadGoogleMaps() {
     return;
   }
   var script = document.createElement("script");
-  script.src = "https://maps.googleapis.com/maps/api/js?key=YOUR_NEW_KEY&callback=initMap&loading=async";  script.async = true;
+  script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1F-BpX660SBK3-Vw9O9f7AEvTAIH8rI&callback=initMap";
+  script.async = true;
   script.onerror = function () {
     console.error("Google Maps API could not load.");
   };
