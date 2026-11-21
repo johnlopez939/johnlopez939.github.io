@@ -1,3 +1,4 @@
+/* ---------- Base (mobile) styles ---------- */
 
 body {
   background-color: rgb(88, 127, 193);
@@ -17,26 +18,30 @@ body {
   font-size: 32px;
 }
 
+/* Navigation: horizontal on all screen sizes */
 #indexNav {
   width: 100%;
   background-color: #00f7ff;
   display: flow-root;
 }
 
-#indexNav ul {
+#indexNav > ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#indexNav ul li {
-  display: block;
-	text-align: center;
+#indexNav > ul > li {
+  text-align: center;
   position: relative;
 }
 
 #indexNav ul li a {
-  padding: 12px;
+  padding: 12px 14px;
   display: block;
   text-decoration: none;
   color: #000000;
@@ -47,23 +52,22 @@ body {
   color: #00f7ff;
 }
 
+/* Dropdown menu */
 #indexNav ul li ul {
   display: none;
-	position: absolute;
+  position: absolute;
   top: 100%;
   left: 0;
   min-width: 100%;
   z-index: 10;
   background-color: #00f7ff;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 #indexNav ul li:hover > ul {
   display: block;
-}
-
-#indexNav ul li ul li {
-  float: none;
-  right: 0;
 }
 
 #indexWelcome {
@@ -81,7 +85,7 @@ body {
 }
 
 #indexAdditionalInfo {
-	text-align: center;
+  text-align: center;
   color: black;
   font-size: 16px;
   margin: 20px 15px 0;
@@ -92,68 +96,23 @@ body {
   /* Change 1: fixed-width centered page */
   body {
     width: 760px;
-    background-color: rgb(0, 229, 255);
+    background-color: rgb(20, 46, 133);
   }
 
-  /* Change 2: nav links go horizontal and centered */
-  #indexHeader {
-		background-color: #b890d7;
-  	overflow: hidden;
-}
-
-  #indexHeader h1 {
-  	color: white;
-    text-align: center;
-    font-size: 32px;
-  }
-
-  #indexNav {
-    width: 100%;
-    background-color: #00f7ff;
-    display: flow-root;
-    }
-
-  #indexNav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-   }
-
-  #indexNav ul li {
-    display: block;
-    text-align: center;
-    position: relative;
-  }
-
+  /* Change 2: roomier link padding */
   #indexNav ul li a {
-    padding: 12px;
-    display: block;
-    text-decoration: none;
-    color: #000000;
+    padding: 12px 24px;
   }
 
-  #indexNav ul li a:hover {
-    background-color: #000000;
-    color: #00f7ff;
+  /* Change 3: larger welcome heading */
+  #indexWelcome {
+    font-size: 36px;
   }
 
-  #indexNav ul li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 100%;
-    z-index: 10;
-    background-color: #00f7ff;
-  }
-
-  #indexNav ul li:hover > ul {
-    display: block;
-  }
-
-  #indexNav ul li ul li {
-  	float: none;
-    right: 0;
+  /* Change 4: slightly larger body text */
+  #indexIntro,
+  #indexAdditionalInfo {
+    font-size: 18px;
   }
 }
 
@@ -169,10 +128,10 @@ body {
     font-size: 40px;
   }
 
-  /* Change 3: larger intro text */
+  /* Change 3: larger intro and body text */
   #indexIntro,
   #indexAdditionalInfo {
-  	font-size: 20px;
+    font-size: 20px;
   }
 
   /* Change 4: larger nav links */
