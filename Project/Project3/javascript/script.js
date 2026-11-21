@@ -14,7 +14,7 @@ function setupQuestionsButton() {
     return;
   }
   btn.addEventListener("click", function () {
-    alert("If you have questions, contact me at:\nyour.email@example.com");
+    alert("If you have questions, contact me at:\njlopez103@hawk.illinoistech.edu");
   });
 }
 
